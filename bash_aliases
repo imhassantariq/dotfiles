@@ -1,28 +1,28 @@
+# custom shortcut commands 
 alias ..="cd .."
 alias -- -="cd -"
 alias lsa="ls -al"
+alias c='clear'
 
 alias desk="cd ~/Desktop"
 alias down="cd ~/Downloads"
-alias arbi="cd ~/arbisoft"
-alias work="cd ~/workspace"
-alias philu="subl $HOME/philu.sublime-project"
-alias ducsd="cd $HOME/arbisoft/ucsd/edx/devstack && workon ucsd"
-alias eucsd="cd $HOME/arbisoft/ucsd/edx/edx-platform && workon ucsd"
-alias evucsd="cd $HOME/arbisoft/ucsd/events"
-alias sucsd="subl $HOME/ucsd.sublime-project"
+alias arbi="cd ~/work/arbisoft"
 
-alias gxi="cd $HOME/gxi && cargo run &"
 
-# Git aliaes
-alias checkout="git checkout"
-alias clone="git clone"
-alias fetch="git fetch"
+# git
+alias gits='git status'
+alias pull='git pull'
+alias checkout='git checkout'
 alias pull="git pull"
-alias push="git push"
-alias status="git status"
 alias branch="git branch"
 
-alias cod4="docker start fervent_kowalevski"
+# ucsd related
+alias scsd='cd ~/work/arbisoft/ucsd/edx/edx-platform/ && source ../../env/bin/activate'
+alias ucsd='cd ~/work/arbisoft/ucsd/edx/devstack/ && source ../../env/bin/activate'
+alias sucsd='subl ~/work/arbisoft/ucsd/edx/'
+alias cucsd='code ~/work/arbisoft/ucsd/edx/'
+
+
+alias cod4="docker start vibrant_shannon"
 
 alias test_transformers="paver test_system -t openedx/features/caliper_tracking/tests/tests.py::CaliperTransformationTestCase::test_caliper_transformers --fasttest"

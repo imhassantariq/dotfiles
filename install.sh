@@ -19,21 +19,12 @@ sudo apt update
 sudo apt install -y \
     apt-transport-https \
     build-essential \
-    ca-certificates \
+    pandoc \
+    shunit2 \
     curl \
     debhelper \
-    diodon \
-    dropbox \
-    filezilla \
-    kazam \
-    megacmd \
     mysql-client mysql-server mysql-workbench \
-    pandoc \
-    php composer php-common php-mbstring php-xml php-zip \
-    qbittorrent \
-    shunit2 \
     snapd \
-    software-properties-common \
     sublime-text \
     terminator \
     vagrant \
@@ -42,7 +33,7 @@ sudo apt install -y \
     virtualenv virtualenvwrapper
 
 sudo snap install postman
-sudo snap install vscode --classic
+sudo snap install vscode
 
 # Install nvm
 get_latest_release() {
@@ -64,7 +55,8 @@ sudo usermod -aG docker $USER
 git clone https://github.com/mkropat/jumpapp.git
 cd jumpapp
 make deb
-sudo apt install -y ./jumpapp*all.deb
+sudo dpkg -i jumpapp*all.deb
+sudo apt-get -y install -f	# if there were missing dependencies
 
 cd $HOME/dotfiles/
 
@@ -80,4 +72,4 @@ sudo apt-get install -f
 git clean -f
 
 # Import Cinnamon desktop settings
-dconf load /org/cinnamon/ < ./cinnamon.conf
+dconf load /org/gnome/ < ./gnome.conf
