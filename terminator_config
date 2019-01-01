@@ -13,7 +13,7 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#300a24"
+    background_color = "#323232"
     background_image = None
     font = Monospace 11
     foreground_color = "#ffffff"

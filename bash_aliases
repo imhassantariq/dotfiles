@@ -1,7 +1,7 @@
 # custom shortcut commands 
 alias ..="cd .."
 alias -- -="cd -"
-alias lsa="ls -al"
+alias la="ls -al"
 alias c='clear'
 
 alias desk="cd ~/Desktop"
@@ -13,7 +13,6 @@ alias arbi="cd ~/work/arbisoft"
 alias gits='git status'
 alias pull='git pull'
 alias checkout='git checkout'
-alias pull="git pull"
 alias branch="git branch"
 
 # ucsd related
