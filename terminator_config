@@ -1,6 +1,9 @@
 [global_config]
+  enabled_plugins = TestPlugin, TerminatorThemes, LaunchpadCodeURLHandler, LaunchpadBugURLHandler
+  handle_size = 0
   suppress_multiple_term_dialog = True
   title_font = Sans 14
+  window_state = maximise
 [keybindings]
 [layouts]
   [[default]]
@@ -12,10 +15,50 @@
       type = Window
 [plugins]
 [profiles]
-  [[default]]
+  [[default_back]]
     background_color = "#323232"
     background_image = None
     font = Monospace 11
     foreground_color = "#ffffff"
     palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+    use_system_font = False
+  [[default]]
+    background_color = "#282c34"
+    background_darkness = 0.98
+    background_image = None
+    copy_on_selection = True
+    cursor_color = "#bbbbbb"
+    font = Monospace 12
+    foreground_color = "#abb2bf"
+    icon_bell = False
+    palette = "#000000:#eb6e67:#95ee8f:#f8c456:#6eaafb:#d886f3:#6cdcf7:#b2b2b2:#50536b:#eb6e67:#95ee8f:#f8c456:#6eaafb:#d886f3:#6cdcf7:#dfdfdf"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[Afterglow]]
+    background_color = "#212121"
+    background_image = None
+    cursor_color = "#d0d0d0"
+    font = Monospace 12
+    foreground_color = "#d0d0d0"
+    palette = "#151515:#ac4142:#7e8e50:#e5b567:#6c99bb:#9f4e85:#7dd6cf:#d0d0d0:#505050:#ac4142:#7e8e50:#e5b567:#6c99bb:#9f4e85:#7dd6cf:#f5f5f5"
+    use_system_font = False
+  [[Glacier]]
+    background_color = "#0c1115"
+    background_image = None
+    cursor_color = "#6c6c6c"
+    foreground_color = "#ffffff"
+    palette = "#2e343c:#bd0f2f:#35a770:#fb9435:#1f5872:#bd2523:#778397:#ffffff:#404a55:#bd0f2f:#49e998:#fddf6e:#2a8bc1:#ea4727:#a0b6d3:#ffffff"
+  [[OneDark]]
+    background_color = "#282c34"
+    background_darkness = 0.98
+    background_image = None
+    copy_on_selection = True
+    cursor_color = "#bbbbbb"
+    font = Monospace 12
+    foreground_color = "#abb2bf"
+    icon_bell = False
+    palette = "#000000:#eb6e67:#95ee8f:#f8c456:#6eaafb:#d886f3:#6cdcf7:#b2b2b2:#50536b:#eb6e67:#95ee8f:#f8c456:#6eaafb:#d886f3:#6cdcf7:#dfdfdf"
+    scrollbar_position = hidden
+    show_titlebar = False
     use_system_font = False
