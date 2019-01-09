@@ -3,7 +3,7 @@ alias ..="cd .."
 alias -- -="cd -"
 alias la="ls -al"
 alias c='clear'
-alias pwd="pwd | xclip -selection c"
+alias pwd="pwd && pwd | xclip -selection c"
 
 alias desk="cd ~/Desktop"
 alias down="cd ~/Downloads"
