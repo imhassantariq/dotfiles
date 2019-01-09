@@ -34,6 +34,9 @@ alias ucsd='cd ~/work/arbisoft/ucsd/edx/devstack/ && source ../../env/bin/activa
 alias sucsd='subl ~/work/arbisoft/ucsd/edx/'
 alias cucsd='code ~/work/arbisoft/ucsd/edx/'
 
+alias ssh1='ssh -i /home/danial/work/arbisoft/ucsd/dev-ucsd.pem ubuntu@34.222.115.221 -L 2222:10.175.142.136:22'
+alias ssh2='ssh -i /home/danial/work/arbisoft/ucsd/dev-ucsd.pem ubuntu@localhost -p 2222'
+
 alias pdev='git checkout develop && git pull'
 
 

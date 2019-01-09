@@ -6,7 +6,7 @@ cp ./img/* $HOME/Pictures/
 # Download debs
 wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megasync-xUbuntu_18.04_amd64.deb
 wget -P $HOME/Downloads https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-
+wget -P $HOME/Downloads https://github.com/sharkdp/bat/releases/download/v0.9.0/bat-musl_0.9.0_amd64.deb
 # Install debs
 sudo apt install -y $HOME/Downloads/*.deb
 
@@ -30,7 +30,8 @@ sudo apt install -y \
     vagrant \
     vim vim-gtk3 \
     virtualbox \
-    virtualenv virtualenvwrapper
+    virtualenv virtualenvwrapper \
+    zsh
 
 sudo snap install postman
 sudo snap install vscode
@@ -57,6 +58,7 @@ cd jumpapp
 make deb
 sudo dpkg -i jumpapp*all.deb
 sudo apt-get -y install -f	# if there were missing dependencies
+
 
 cd $HOME/dotfiles/
 
