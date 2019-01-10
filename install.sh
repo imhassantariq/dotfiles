@@ -7,7 +7,7 @@ cp ./img/* $HOME/Pictures/
 wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megasync-xUbuntu_18.04_amd64.deb
 wget -P $HOME/Downloads https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget -P $HOME/Downloads https://github.com/sharkdp/bat/releases/download/v0.9.0/bat-musl_0.9.0_amd64.deb
-wget -P $HOME/Downloads https://github.com/BoostIO/boost-releases/releases/download/v0.11.12/boostnote_0.11.12_amd64.deb
+
 # Install debs
 sudo apt install -y $HOME/Downloads/*.deb
 
@@ -28,6 +28,7 @@ sudo apt install -y \
     curl \
     debhelper \
     mysql-client mysql-server mysql-workbench \
+    megacmd \
     snapd \
     sublime-text \
     terminator \
@@ -64,6 +65,7 @@ git clone https://github.com/mkropat/jumpapp.git
 cd jumpapp
 make deb
 sudo dpkg -i jumpapp*all.deb
+make clean
 sudo apt-get -y install -f	# if there were missing dependencies
 
 
