@@ -68,6 +68,12 @@ sudo dpkg -i jumpapp*all.deb
 make clean
 sudo apt-get -y install -f	# if there were missing dependencies
 
+# install vnote
+wget -P $HOME/Downloads  https://github.com/tamlok/vnote/releases/download/v2.2/VNote-2.2-x86_64.AppImage
+sudo mkdir /opt/vnote
+sudo mv $HOME/Downloads/VNote-2.2-x86_64.AppImage /opt/vnote/
+sudo ln -sf /opt/vnote/VNote-2.2-x86_64.AppImage /usr/bin/vnote
+
 
 cd $HOME/dotfiles/
 
