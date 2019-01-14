@@ -39,7 +39,7 @@ sudo apt install -y \
     zsh
 
 sudo snap install postman
-sudo snap install vscode
+sudo snap install vscode --classic
 
 # Install nvm
 get_latest_release() {
@@ -66,6 +66,7 @@ cd jumpapp
 make deb
 sudo dpkg -i jumpapp*all.deb
 make clean
+
 sudo apt-get -y install -f	# if there were missing dependencies
 
 # install vnote
@@ -88,5 +89,5 @@ sudo apt-get install -f
 # Clean all generated files
 git clean -f
 
-# Import Cinnamon desktop settings
-dconf load /org/gnome/ < ./gnome.conf
+# Import gnome? desktop settings
+# dconf load /org/gnome/ < ./gnome.conf

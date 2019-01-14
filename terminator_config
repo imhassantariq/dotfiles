@@ -33,7 +33,7 @@
     icon_bell = False
     palette = "#000000:#eb6e67:#95ee8f:#f8c456:#6eaafb:#d886f3:#6cdcf7:#b2b2b2:#50536b:#eb6e67:#95ee8f:#f8c456:#6eaafb:#d886f3:#6cdcf7:#dfdfdf"
     scrollbar_position = hidden
-    show_titlebar = False
+    show_titlebar = True
     use_system_font = False
   [[Afterglow]]
     background_color = "#212121"
