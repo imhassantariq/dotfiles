@@ -62,6 +62,9 @@ sudo apt install -y docker-ce
 sudo groupadd docker
 sudo usermod -aG docker $USER
 
+# Install docker-compose
+pip install docker-compose
+
 # Install Jumpapp
 git clone https://github.com/mkropat/jumpapp.git
 cd jumpapp
