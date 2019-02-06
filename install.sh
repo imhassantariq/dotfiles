@@ -31,6 +31,8 @@ sudo apt install -y \
     debhelper \
     mysql-client mysql-server mysql-workbench \
     megacmd \
+    ruby-full \
+    redis-server \
     snapd \
     sublime-text \
     sublime-merge \
