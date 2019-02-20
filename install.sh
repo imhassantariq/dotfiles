@@ -29,6 +29,7 @@ sudo apt install -y \
     shunit2 \
     curl \
     debhelper \
+    htop \
     mysql-client mysql-server mysql-workbench \
     megacmd \
     ruby-full \
@@ -103,7 +104,7 @@ git clean -f
 sudo apt-get install zsh
 
 # oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 
 echo "YOU ARE DONE :)"
