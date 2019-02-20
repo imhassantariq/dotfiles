@@ -99,6 +99,7 @@ git clean -f
 
 # Import gnome desktop settings
 # dconf load /org/gnome/ < ./gnome.conf
+dconf load /org/cinnamon/ < ./cinnamon.conf
 
 # Finally install zsh
 sudo apt-get install zsh
