@@ -32,6 +32,8 @@ sudo apt install -y \
     htop \
     mysql-client mysql-server mysql-workbench \
     megacmd \
+    python-pip \
+    python3-pip \
     ruby-full \
     redis-server \
     snapd \
