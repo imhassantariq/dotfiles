@@ -85,6 +85,15 @@ sudo mkdir /opt/vnote
 sudo mv $HOME/Downloads/VNote-2.2-x86_64.AppImage /opt/vnote/
 sudo ln -sf /opt/vnote/VNote-2.2-x86_64.AppImage /usr/bin/vnote
 
+# install rustp, cargo and rust
+curl https://sh.rustup.rs -sSf | sh
+
+
+# install rbenv for ruby
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+    # doctor for rbenv verification
+    curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+
 
 cd $HOME/dotfiles/
 
