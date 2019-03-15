@@ -44,7 +44,9 @@ alias test_transformers="paver test_system -t openedx/features/caliper_tracking/
 
 
 # nodebb phillU
-alias ncode='code /home/danial/work/arbisoft/phillU/devstack-config-master'
+alias pcode='code /home/danial/work/arbisoft/phillU/devstack-config-master'
 alias philu='cd ~/work/arbisoft/phillU/devstack-config-master'
 
 
+# nodebb
+alias ncode='code /home/danial/work/arbisoft/nodebb'
