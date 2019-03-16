@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Copy files
-cp ./img/* $HOME/Pictures/
+cp ./images/* $HOME/Pictures/
 
 # Download debs
 wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megasync-xUbuntu_18.04_amd64.deb
@@ -70,12 +70,25 @@ sudo usermod -aG docker $USER
 # Install docker-compose
 pip install docker-compose
 
+
+# install watchman
+git clone https://github.com/facebook/watchman.git
+cd watchman
+git checkout v4.9.0  # the latest stable release
+./autogen.sh
+./configure
+make
+sudo make install
+cd ..
+
+
 # Install Jumpapp
 git clone https://github.com/mkropat/jumpapp.git
 cd jumpapp
 make deb
 sudo dpkg -i jumpapp*all.deb
 make clean
+cd ..
 
 sudo apt-get -y install -f	# if there were missing dependencies
 
