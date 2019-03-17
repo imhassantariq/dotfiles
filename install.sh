@@ -32,6 +32,8 @@ sudo apt install -y \
     htop \
     mysql-client mysql-server mysql-workbench \
     megacmd \
+    python-dev \
+    python3-dev \
     python-pip \
     python3-pip \
     ruby-full \
@@ -43,7 +45,8 @@ sudo apt install -y \
     vagrant \
     vim vim-gtk3 \
     virtualbox \
-    virtualenv virtualenvwrapper
+    virtualenv virtualenvwrapper\
+    xclip
 
 sudo snap install postman
 sudo snap install vscode --classic
