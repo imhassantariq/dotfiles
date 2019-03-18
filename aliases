@@ -49,4 +49,5 @@ alias philu='cd ~/work/arbisoft/phillU/devstack-config-master'
 
 
 # nodebb
+alias nodebb='cd /home/danial/work/arbisoft/nodebb'
 alias ncode='code /home/danial/work/arbisoft/nodebb'
