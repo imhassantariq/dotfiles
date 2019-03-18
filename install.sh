@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Copy files
-cp ./img/* $HOME/Pictures/
+cp ./images/* $HOME/Pictures/
 
 # Download debs
 wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megasync-xUbuntu_18.04_amd64.deb
@@ -29,8 +29,13 @@ sudo apt install -y \
     shunit2 \
     curl \
     debhelper \
+    htop \
     mysql-client mysql-server mysql-workbench \
     megacmd \
+    python-dev \
+    python3-dev \
+    python-pip \
+    python3-pip \
     ruby-full \
     redis-server \
     snapd \
@@ -40,7 +45,8 @@ sudo apt install -y \
     vagrant \
     vim vim-gtk3 \
     virtualbox \
-    virtualenv virtualenvwrapper
+    virtualenv virtualenvwrapper\
+    xclip
 
 sudo snap install postman
 sudo snap install vscode --classic
@@ -67,12 +73,25 @@ sudo usermod -aG docker $USER
 # Install docker-compose
 pip install docker-compose
 
+
+# install watchman
+git clone https://github.com/facebook/watchman.git
+cd watchman
+git checkout v4.9.0  # the latest stable release
+./autogen.sh
+./configure
+make
+sudo make install
+cd ..
+
+
 # Install Jumpapp
 git clone https://github.com/mkropat/jumpapp.git
 cd jumpapp
 make deb
 sudo dpkg -i jumpapp*all.deb
 make clean
+cd ..
 
 sudo apt-get -y install -f	# if there were missing dependencies
 
@@ -81,6 +100,15 @@ wget -P $HOME/Downloads  https://github.com/tamlok/vnote/releases/download/v2.2/
 sudo mkdir /opt/vnote
 sudo mv $HOME/Downloads/VNote-2.2-x86_64.AppImage /opt/vnote/
 sudo ln -sf /opt/vnote/VNote-2.2-x86_64.AppImage /usr/bin/vnote
+
+# install rustp, cargo and rust
+curl https://sh.rustup.rs -sSf | sh
+
+
+# install rbenv for ruby
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+    # doctor for rbenv verification
+    curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 
 
 cd $HOME/dotfiles/
@@ -98,12 +126,13 @@ git clean -f
 
 # Import gnome desktop settings
 # dconf load /org/gnome/ < ./gnome.conf
+dconf load /org/cinnamon/ < ./cinnamon.conf
 
 # Finally install zsh
 sudo apt-get install zsh
 
 # oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 
 echo "YOU ARE DONE :)"
