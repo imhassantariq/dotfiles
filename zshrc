@@ -114,3 +114,4 @@ export COMPOSE_HTTP_TIMEOUT=3000000000
 export ANDROID_HOME=/home/$USER/Android/Sdk
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=$ANDROID_HOME/tools:$PATH
+eval $(thefuck --alias)

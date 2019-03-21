@@ -55,6 +55,7 @@ sudo apt install -y \
 
 sudo snap install postman
 sudo snap install vscode --classic
+sudo snap install insomnia
 
 # Install nvm
 get_latest_release() {
