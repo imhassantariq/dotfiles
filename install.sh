@@ -68,6 +68,11 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/$(get_latest_release "
 # Install node js
 nvm install node
 
+# install grunt
+sudo npm install -g grunt-cli
+# Install create-react-app for react js
+npm install -g create-react-app
+
 #  Install docker
 sudo apt remove docker docker-engine docker.io
 
